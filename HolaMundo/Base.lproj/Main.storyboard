@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HolaMundo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa la edad de tu gato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDQ-aG-0cS">
+                                <rect key="frame" x="60" y="40" width="200" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpb-Dh-hjW">
+                                <rect key="frame" x="100" y="151" width="120" height="36"/>
+                                <color key="backgroundColor" red="0.26765413160000001" green="0.62458357050000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Calcular">
+                                    <color key="titleColor" red="1" green="0.94269531900000003" blue="0.39756080789999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="calcularEdad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2I-u9-wWw"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gato" translatesAutoresizingMaskIntoConstraints="NO" id="mkV-UK-zRd">
+                                <rect key="frame" x="90" y="307.5" width="140" height="161"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWg-zz-yUD">
+                                <rect key="frame" x="40" y="101" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBC-Ud-OAh">
+                                <rect key="frame" x="42" y="217" width="236" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mkV-UK-zRd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="009-I8-7vt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mkV-UK-zRd" secondAttribute="bottom" constant="100" id="1Gw-S5-kii"/>
+                            <constraint firstItem="vDQ-aG-0cS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="944-BP-HhP"/>
+                            <constraint firstItem="hpb-Dh-hjW" firstAttribute="top" secondItem="BWg-zz-yUD" secondAttribute="bottom" constant="20" id="H4u-io-NEq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hpb-Dh-hjW" secondAttribute="trailing" constant="100" id="PxO-9s-XjY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CBC-Ud-OAh" secondAttribute="trailing" constant="42" id="UN3-eU-etT"/>
+                            <constraint firstItem="CBC-Ud-OAh" firstAttribute="top" secondItem="hpb-Dh-hjW" secondAttribute="bottom" constant="30" id="Wol-6k-cHT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BWg-zz-yUD" secondAttribute="trailing" constant="40" id="b7o-0B-zGN"/>
+                            <constraint firstItem="hpb-Dh-hjW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="bas-70-gP3"/>
+                            <constraint firstItem="CBC-Ud-OAh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="bbD-jW-3ZB"/>
+                            <constraint firstItem="BWg-zz-yUD" firstAttribute="top" secondItem="vDQ-aG-0cS" secondAttribute="bottom" constant="40.5" id="eNL-Ue-qeP"/>
+                            <constraint firstItem="mkV-UK-zRd" firstAttribute="top" secondItem="CBC-Ud-OAh" secondAttribute="bottom" constant="70" id="ga7-F0-zhh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mkV-UK-zRd" secondAttribute="trailing" constant="90" id="pK3-cj-kmM"/>
+                            <constraint firstItem="vDQ-aG-0cS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="qdh-vu-dR1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vDQ-aG-0cS" secondAttribute="trailing" constant="60" id="rwV-C3-Zo5"/>
+                            <constraint firstItem="mkV-UK-zRd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vgD-YB-z9A"/>
+                            <constraint firstItem="BWg-zz-yUD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="yPW-38-Xn6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="etiquetaResultado" destination="CBC-Ud-OAh" id="ybW-Bg-8tg"/>
+                        <outlet property="textField" destination="BWg-zz-yUD" id="U0e-my-orM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="371.25" y="123.59154929577466"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gato" width="118" height="161"/>
+    </resources>
 </document>
